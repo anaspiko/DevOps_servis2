@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: DevOps_servis2
+spec:
+  containers:
+  - name: DevOps_servis2
+    image: /repository/docker/spikoana1/servis2
