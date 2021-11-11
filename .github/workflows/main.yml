@@ -24,6 +24,12 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Unit test
+        run: echo "Unit Test"
+        
+      - name: Integration test
+        run: echo "Integration Test"
+        
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
@@ -32,6 +38,9 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/servis2:latest
+          
+      - name: e2e test
+        run: echo "e2e Test"
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
