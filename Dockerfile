@@ -8,5 +8,5 @@ COPY entrypoint.py /
 
 RUN pip install requests
 
-EXPOSE 8080
+EXPOSE 8081
 CMD [ "fwatchdog" ]
